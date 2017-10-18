@@ -1,7 +1,7 @@
 UIInfo:
 - referencePath: "/vehiclefuellingdetails"
   groups:
-    G1:
+    G11:
       fields:
       - VehicleFuellingDetails[0].transactionId
       - VehicleFuellingDetails[0].transactionDate
