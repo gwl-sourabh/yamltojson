@@ -1,0 +1,16 @@
+UIInfo:
+  referenceDef: URL to the definition
+  groups:
+  - G1:
+    - f1
+    - f2
+  - G2:
+    - f3
+    - f4
+  dependents:
+  - onChangeField: f1
+    affectedFields:
+      f1:
+        pattern: myurl
+        jsonPath: pathToObject
+      f2: {}
