@@ -3,16 +3,16 @@ UIInfo:
   groups:
     G1:
       fields:
-      - VehicleFuellingDetails[0].transactionId
-      - VehicleFuellingDetails[0].transactionDate
-      - VehicleFuellingDetails[0].vehicleReadingDuringFuelling
-      - VehicleFuellingDetails[0].fuelFilled
+      - VehicleFuellingDetails.transactionId
+      - VehicleFuellingDetails.transactionDate
+      - VehicleFuellingDetails.vehicleReadingDuringFuelling
+      - VehicleFuellingDetails.fuelFilled
     G2:
       fields:
-      - VehicleFuellingDetails[0].typeOfFuel
-      - VehicleFuellingDetails[0].totalCostIncurred
-      - VehicleFuellingDetails[0].receiptNo
-      - VehicleFuellingDetails[0].receiptDate
+      - VehicleFuellingDetails.typeOfFuel
+      - VehicleFuellingDetails.totalCostIncurred
+      - VehicleFuellingDetails.receiptNo
+      - VehicleFuellingDetails.receiptDate
   dependents:
   - onChangeField: Connection.usageType
     affectedFields:
