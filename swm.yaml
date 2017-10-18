@@ -9,14 +9,13 @@ info:
     email: venki@egovernments.org
   
 basePath: "/swm-masters/v1"
-
+x-ui-info:
+  $ref: https://raw.githubusercontent.com/gwl-sourabh/yamltojson/master/swm-ui-info.yaml
 paths:
 
     /vehiclefuellingdetails/_search:
       post:
         summary: Get the list of vehiclefuellingdetails
-        x-ui-info: 
-          - $ref: https://raw.githubusercontent.com/gwl-sourabh/yamltojson/master/swm-ui-info.yaml
         description: vehiclefuellingdetails
         tags: 
           - VehicleFuellingDetails
@@ -46,8 +45,6 @@ paths:
     /vehiclefuellingdetails/_create:
       post:
         summary: Create new vehiclefuellingdetails(s)
-        x-ui-info: 
-          - $ref: https://raw.githubusercontent.com/gwl-sourabh/yamltojson/master/swm-ui-info.yaml
         description: Create new vehiclefuellingdetails(s)
         tags: 
           - VehicleFuellingDetails
@@ -71,8 +68,6 @@ paths:
     /vehiclefuellingdetails/_update:
       post:
         summary: Update any of the vehiclefuellingdetails
-        x-ui-info: 
-          - $ref: https://raw.githubusercontent.com/gwl-sourabh/yamltojson/master/swm-ui-info.yaml
         description: Update any of the vehiclefuellingdetails
         tags: 
           - VehicleFuellingDetails
@@ -95,8 +90,6 @@ paths:
     /vehiclemaintenancedetails/_search:
       post:
         summary: Get the list of vehiclemaintenancedetails
-        x-ui-info: 
-          - $ref: https://raw.githubusercontent.com/gwl-sourabh/yamltojson/master/swm-ui-info.yaml
         description: vehiclemaintenancedetails
         tags: 
           - VehicleMaintenanceDetails
@@ -126,8 +119,6 @@ paths:
     /vehiclemaintenancedetails/_create:
       post:
         summary: Create new vehiclemaintenancedetails(s)
-        x-ui-info: 
-          - $ref: https://raw.githubusercontent.com/gwl-sourabh/yamltojson/master/swm-ui-info.yaml
         description: Create new vehiclemaintenancedetails(s)
         tags: 
           - VehicleMaintenanceDetails
@@ -151,8 +142,6 @@ paths:
     /vehiclemaintenancedetails/_update:
       post:
         summary: Update any of the vehiclemaintenancedetails
-        x-ui-info: 
-          - $ref: https://raw.githubusercontent.com/gwl-sourabh/yamltojson/master/swm-ui-info.yaml
         description: Update any of the vehiclemaintenancedetails
         tags: 
           - VehicleMaintenanceDetails
@@ -175,8 +164,6 @@ paths:
     /vehicletripsheetdetails/_search:
       post:
         summary: Get the list of vehicletripsheetdetails
-        x-ui-info: 
-          - $ref: https://raw.githubusercontent.com/gwl-sourabh/yamltojson/master/swm-ui-info.yaml
         description: vehicletripsheetdetails
         tags: 
           - VehicleTripSheetDetails
@@ -206,8 +193,6 @@ paths:
     /vehicletripsheetdetails/_create:
       post:
         summary: Create new vehicletripsheetdetails(s)
-        x-ui-info: 
-          - $ref: https://raw.githubusercontent.com/gwl-sourabh/yamltojson/master/swm-ui-info.yaml
         description: Create new vehicletripsheetdetails(s)
         tags: 
           - VehicleTripSheetDetails
@@ -232,8 +217,6 @@ paths:
       post:
         summary: Update any of the vehicletripsheetdetails
         description: Update any of the vehicletripsheetdetails
-        x-ui-info: 
-          - $ref: https://raw.githubusercontent.com/gwl-sourabh/yamltojson/master/swm-ui-info.yaml
         tags: 
           - VehicleTripSheetDetails
         parameters:
@@ -255,8 +238,6 @@ paths:
     /sourcesegregation/_search:
       post:
         summary: Get the list of sourcesegregation
-        x-ui-info: 
-          - $ref: https://raw.githubusercontent.com/gwl-sourabh/yamltojson/master/swm-ui-info.yaml
         description: sourcesegregation
         tags: 
           - SourceSegregation
@@ -287,8 +268,6 @@ paths:
       post:
         summary: Create new sourcesegregation(s)
         description: Create new sourcesegregation(s)
-        x-ui-info: 
-          - $ref: https://raw.githubusercontent.com/gwl-sourabh/yamltojson/master/swm-ui-info.yaml
         tags: 
           - SourceSegregation
         parameters:
