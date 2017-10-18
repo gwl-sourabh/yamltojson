@@ -1,5 +1,5 @@
 UIInfo:
-  referenceDef: URL to the definition
+- referencePath: /vehiclefuellingdetails
   groups:
     G1:
       fields:
