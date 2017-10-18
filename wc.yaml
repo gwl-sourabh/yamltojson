@@ -17,6 +17,8 @@ host: phoenix-qa.egovernments.org
 schemes:
   - https
 basePath: '/connections/v1'
+x-ui-info:
+  $ref: https://raw.githubusercontent.com/gwl-sourabh/yamltojson/master/ui-info.yaml
 paths:
   /_create:
     post:
