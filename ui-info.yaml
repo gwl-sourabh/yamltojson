@@ -3,8 +3,8 @@ UIInfo:
   groups:
     G1:
       fields:
-      - Connection.connectionOwners[0].name
-      - Connection.connectionOwners[0].mobileNumber
+      - Connection.connectionOwner[0].name
+      - Connection.connectionOwner[0].mobileNumber
   dependents:
   - onChangeField: f1
     affectedFields:
