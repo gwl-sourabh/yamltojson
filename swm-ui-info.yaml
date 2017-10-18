@@ -3,7 +3,7 @@ UIInfo:
   groups:
     G1:
       fields:
-      - VehicleFuellingDetailsfooo\bar.transactionId
+      - VehicleFuellingDetails.transactionId
       - VehicleFuellingDetails.transactionDate
       - VehicleFuellingDetails.vehicleReadingDuringFuelling
       - VehicleFuellingDetails.fuelFilled
