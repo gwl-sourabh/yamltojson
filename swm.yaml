@@ -9,8 +9,7 @@ info:
     email: venki@egovernments.org
   
 basePath: "/swm-masters/v1"
-x-ui-info:
-  $ref: https://raw.githubusercontent.com/gwl-sourabh/yamltojson/master/swm-ui-info.yaml
+
 paths:
 
     /vehiclefuellingdetails/_search:
@@ -1457,6 +1456,7 @@ definitions:
       - typeOfFuel
       - totalCostIncurred
       - receiptNo
+      - receiptDate
     
     VehicleFuellingDetailsRequest:
       description: Contract class to receive request. Array of VehicleFuellingDetails items are used in case of create, whereas single VehicleFuellingDetails item is used for update
