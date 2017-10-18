@@ -1457,7 +1457,6 @@ definitions:
       - typeOfFuel
       - totalCostIncurred
       - receiptNo
-      - receiptDate
     
     VehicleFuellingDetailsRequest:
       description: Contract class to receive request. Array of VehicleFuellingDetails items are used in case of create, whereas single VehicleFuellingDetails item is used for update
