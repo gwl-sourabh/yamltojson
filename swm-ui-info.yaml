@@ -13,6 +13,14 @@ UIInfo:
       - VehicleFuellingDetails[0].totalCostIncurred
       - VehicleFuellingDetails[0].receiptNo
       - VehicleFuellingDetails[0].receiptDate
+  dependents:
+  - onChangeField: Connection.usageType
+    affectedFields:
+      Connection.subUsageType:
+        pattern: "/wcms/masters/usagetypes/_search?&parent={Connection.usageType}&isSubUsageType=true|$..code|$..name"
+        type: dropDown
+  ExternalData:
+    Connection.usageType: "/wcms/masters/usagetypes/_search?|$..code|$..name"
 - referencePath: "/vehiclemaintenancedetails"
   groups:
     G1:
@@ -27,3 +35,11 @@ UIInfo:
       - VehicleFuellingDetails[0].totalCostIncurred
       - VehicleFuellingDetails[0].receiptNo
       - VehicleFuellingDetails[0].receiptDate
+  dependents:
+  - onChangeField: Connection.usageType
+    affectedFields:
+      Connection.subUsageType:
+        pattern: "/wcms/masters/usagetypes/_search?&parent={Connection.usageType}&isSubUsageType=true|$..code|$..name"
+        type: dropDown
+  ExternalData:
+    Connection.usageType: "/wcms/masters/usagetypes/_search?|$..code|$..name"
