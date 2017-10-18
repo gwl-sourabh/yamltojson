@@ -2,7 +2,6 @@ UIInfo:
   referenceDef: URL to the definition
   groups:
     G1:
-      name: Test1
       fields:
       - Connection.connectionOwners[0].name
       - Connection.connectionOwners[0].mobileNumber
