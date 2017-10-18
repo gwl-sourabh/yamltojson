@@ -6,11 +6,12 @@ UIInfo:
       - Connection.connectionOwner[0].name
       - Connection.connectionOwner[0].mobileNumber
       - Connection.usageType
+      - Connection.subUsageType
   dependents:
-  - onChangeField: f1
+  - onChangeField: Connection.usageType
     affectedFields:
-      f1:
-        pattern: myurl
-        jsonPath: pathToObject
+      Connection.subUsageType:
+        pattern: /wcms/masters/usagetypes/_search?&parent={Connection.usageType}&isSubUsageType=true|$..code|$..name
+        type: dropDown
   ExternalData:
     Connection.usageType: "/wcms/masters/usagetypes/_search?|$..code|$..name"
