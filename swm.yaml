@@ -9,14 +9,14 @@ info:
     email: venki@egovernments.org
   
 basePath: "/swm-masters/v1"
-x-ui-info:
-  $ref: https://raw.githubusercontent.com/gwl-sourabh/yamltojson/master/swm-ui-info.yaml
 paths:
 
     /vehiclefuellingdetails/_search:
       post:
         summary: Get the list of vehiclefuellingdetails
         description: vehiclefuellingdetails
+        x-ui-info:
+          $ref: https://raw.githubusercontent.com/gwl-sourabh/yamltojson/master/swm-ui-info.yaml
         tags: 
           - VehicleFuellingDetails
         parameters:
@@ -45,6 +45,8 @@ paths:
     /vehiclefuellingdetails/_create:
       post:
         summary: Create new vehiclefuellingdetails(s)
+        x-ui-info:
+          $ref: https://raw.githubusercontent.com/gwl-sourabh/yamltojson/master/swm-ui-info.yaml
         description: Create new vehiclefuellingdetails(s)
         tags: 
           - VehicleFuellingDetails
