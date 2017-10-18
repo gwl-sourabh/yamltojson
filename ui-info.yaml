@@ -5,10 +5,12 @@ UIInfo:
       fields:
       - Connection.connectionOwner[0].name
       - Connection.connectionOwner[0].mobileNumber
+      - Connection.usageType
   dependents:
   - onChangeField: f1
     affectedFields:
       f1:
         pattern: myurl
         jsonPath: pathToObject
-      f2: {}
+  ExternalData:
+    Connection.usageType: "/wcms/masters/usagetypes/_search?|$..code|$..name"
