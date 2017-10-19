@@ -6,18 +6,18 @@ UIInfo:
       - VehicleFuellingDetails[0].transactionDate
     G2:
       fields:
-      - VehicleFuellingDetails[0].vehicleType
-      - VehicleFuellingDetails[0].vehicleRegNo
+      - VehicleFuellingDetails[0].vehicleType.name
+      - VehicleFuellingDetails[0].vehicleRegNo.regNumber
       - VehicleFuellingDetails[0].vehicleReadingDuringFuelling
     G3:
       fields:
-      - VehicleFuellingDetails[0].refuellingStation
+      - VehicleFuellingDetails[0].refuellingStation.name
       - VehicleFuellingDetails[0].fuelFilled
       - VehicleFuellingDetails[0].typeOfFuel
       - VehicleFuellingDetails[0].totalCostIncurred
       - VehicleFuellingDetails[0].receiptNo
       - VehicleFuellingDetails[0].receiptDate
   ExternalData:
-     VehicleFuellingDetails[0].vehicleType: "/wcms/masters/usagetypes/_search?|$..code|$..name"
-     VehicleFuellingDetails[0].vehicleRegNo: "/wcms/masters/usagetypes/_search?|$..code|$..name"
-     VehicleFuellingDetails[0].refuellingStation: "/wcms/masters/usagetypes/_search?|$..code|$..name"
+     VehicleFuellingDetails[0].vehicleType.name: "/wcms/masters/usagetypes/_search?|$..code|$..name"
+     VehicleFuellingDetails[0].vehicleRegNo.regNumber: "/wcms/masters/usagetypes/_search?|$..code|$..name"
+     VehicleFuellingDetails[0].refuellingStation.name: "/wcms/masters/usagetypes/_search?|$..code|$..name"
