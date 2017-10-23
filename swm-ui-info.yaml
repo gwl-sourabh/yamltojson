@@ -18,6 +18,15 @@ UIInfo:
       - vehicleFuellingDetails[0].receiptNo
       - vehicleFuellingDetails[0].receiptDate
   ExternalData:
-     vehicleFuellingDetails[0].vehicleType.name: "/wcms/masters/usagetypes/_search?|$..code|$..name"
-     vehicleFuellingDetails[0].vehicleRegNo.regNumber: "/wcms/masters/usagetypes/_search?|$..code|$..name"
-     vehicleFuellingDetails[0].refuellingStation.name: "/wcms/masters/usagetypes/_search?|$..code|$..name"
+  - fieldName: vehicleFuellingDetails[0].vehicleType.name
+    url: "/egov-mdms-service/v1/_get?moduleName=SWM&masterName=VehicleType&tenantId=mh"
+    keyPath: "$..id"
+    valuePath: "$..name"
+  - fieldName: vehicleFuellingDetails[0].vehicleRegNo.regNumber
+    url: "/egov-mdms-service/v1/_get?moduleName=SWM&masterName=Vehicle&tenantId=mh"
+    keyPath: "$..id"
+    valuePath: "$..regNumber"
+  - fieldName: vehicleFuellingDetails[0].refuellingStation.name
+    url: "/egov-mdms-service/v1/_get?moduleName=SWM&masterName=RefillingPumpStation&tenantId=mh"
+    keyPath: "$..id"
+    valuePath: "$..name"
