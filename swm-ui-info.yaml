@@ -21,12 +21,40 @@ UIInfo:
   - fieldName: vehicleFuellingDetails[0].vehicleType.name
     url: "/egov-mdms-service/v1/_get?moduleName=SWM&masterName=VehicleType&tenantId=mh"
     keyPath: "$..id"
-    valPath: "$..name"
+    valuePath: "$..name"
   - fieldName: vehicleFuellingDetails[0].vehicleRegNo.regNumber
     url: "/egov-mdms-service/v1/_get?moduleName=SWM&masterName=Vehicle&tenantId=mh"
     keyPath: "$..id"
-    valPath: "$..regNumber"
+    valuePath: "$..regNumber"
   - fieldName: vehicleFuellingDetails[0].refuellingStation.name
     url: "/egov-mdms-service/v1/_get?moduleName=SWM&masterName=RefillingPumpStation&tenantId=mh"
     keyPath: "$..id"
-    valPath: "$..name"
+    valuePath: "$..name"
+  Searchresult:
+    rowClickUrlUpdate: /update/vehiclefuellingdetails/{transactionNo}
+    rowClickUrlView: /view/vehiclefuellingdetails/{transactionNo}
+    columns:
+    - transactionNo
+    - transactionDate
+    - vehicleType
+    - vehicleRegNo
+    - vehicleReadingDuringFuelling
+    - refuellingStation
+    - fuelFilled
+    - typeOfFuel
+    - totalCostIncurred
+    - receiptNo
+    - receiptDate
+    values:
+    - transactionNo
+    - transactionDate
+    - vehicleType.name
+    - vehicleRegNo.regNumber
+    - vehicleReadingDuringFuelling
+    - refuellingStation.name
+    - fuelFilled
+    - typeOfFuel
+    - totalCostIncurred
+    - receiptNo
+    - receiptDate
+    resultObjectName: vehicleFuellingDetails
