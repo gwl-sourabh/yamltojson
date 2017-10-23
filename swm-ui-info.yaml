@@ -30,7 +30,7 @@ UIInfo:
     url: "/egov-mdms-service/v1/_get?moduleName=SWM&masterName=RefillingPumpStation&tenantId=mh"
     keyPath: "$..id"
     valuePath: "$..name"
-  Searchresult:
+  SearchResult:
     rowClickUrlUpdate: /update/vehiclefuellingdetails/{transactionNo}
     rowClickUrlView: /view/vehiclefuellingdetails/{transactionNo}
     columns:
