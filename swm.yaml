@@ -8,7 +8,7 @@ info:
     name: Venkataramana B
     email: venki@egovernments.org
   
-basePath: "/swm-masters/v1"
+basePath: "/swm-services"
 
 x-ui-info:
   $ref: https://raw.githubusercontent.com/gwl-sourabh/yamltojson/master/swm-ui-info.yaml
