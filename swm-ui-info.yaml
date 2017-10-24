@@ -19,15 +19,15 @@ UIInfo:
       - vehicleFuellingDetails[0].receiptDate
   externalData:
   - fieldName: vehicleFuellingDetails[0].vehicleType.name
-    url: "/egov-mdms-service/v1/_get?&moduleName=SWM&masterName=VehicleType&tenantId=mh"
+    url: "/egov-mdms-service/v1/_get?&moduleName=SWM&masterName=VehicleType"
     keyPath: "$..id"
     valPath: "$..name"
   - fieldName: vehicleFuellingDetails[0].vehicleRegNo.regNumber
-    url: "/egov-mdms-service/v1/_get?&moduleName=SWM&masterName=Vehicle&tenantId=mh"
+    url: "/egov-mdms-service/v1/_get?&moduleName=SWM&masterName=Vehicle"
     keyPath: "$..id"
     valPath: "$..regNumber"
   - fieldName: vehicleFuellingDetails[0].refuellingStation.name
-    url: "/egov-mdms-service/v1/_get?&moduleName=SWM&masterName=RefillingPumpStation&tenantId=mh"
+    url: "/egov-mdms-service/v1/_get?&moduleName=SWM&masterName=RefillingPumpStation"
     keyPath: "$..id"
     valPath: "$..name"
   searchResult:
