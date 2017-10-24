@@ -13,6 +13,7 @@ basePath: "/swm-services"
 x-ui-info:
   $ref: https://raw.githubusercontent.com/gwl-sourabh/yamltojson/master/swm-ui-info.yaml
 
+
 paths:
 
     /vehiclefuellingdetails/_search:
@@ -32,10 +33,10 @@ paths:
             in: query
             maxItems: 50
             description: comma seperated list of Ids
-          - name: transactionId
+          - name: transactionNo
             type: string
             in: query
-            description: transactionId of the VehicleFuellingDetails
+            description: transactionNo of the VehicleFuellingDetails
             maxLength: 265
           - name: transactionDate
             type: string
@@ -1497,9 +1498,9 @@ definitions:
           description: tenant id of the VehicleFuellingDetails
           maxLength: 128
           minLength: 4
-        transactionId:
+        transactionNo:
           type: string
-          description: transactionId. unique across the system
+          description: transactionNo. unique across the system
           maxLength: 256
           minLength: 1
         transactionDate:
@@ -1545,7 +1546,7 @@ definitions:
       required:
       - id
       - tenantId
-      - transactionId
+      - transactionNo
       - transactionDate
       - vehicleType
       - vehicleRegNo
@@ -1889,7 +1890,7 @@ definitions:
       
     Documents:
       type: object
-      description: An Object to hold the support document detail for a given Trade License
+      description: An Object to hold the support document detail for a given Vendor Payment Details
       properties:
         id: 
           type: integer
@@ -1897,13 +1898,14 @@ definitions:
           description: Unique Identifier of the Support Document
         tenantId:
           type: string
-          description: tenant id of the Trade License
+          description: tenant id of the Vendor Payment Details
           maxLength: 128
           minLength: 4
-        licenseId:
-          type: integer
-          format: int64
-          description: Unique Identifier of the Trade License
+        vendorPaymentDetailsId:
+          type: string
+          maxLength: 256
+          minLength: 1
+          description: Unique Identifier of the Vendor Payment Details
         documentTypeId:
           type: integer
           format: int64
@@ -1917,7 +1919,7 @@ definitions:
         auditDetails:
           $ref: "https://raw.githubusercontent.com/egovernments/egov-services/master/docs/common/contracts/v1-0-0.yml#/definitions/AuditDetails"
       required:
-      - licenseId
+      - vendorPaymentDetailsId
       - tenantId
       - documentTypeId
       - fileStoreId
