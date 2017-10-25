@@ -21,7 +21,7 @@ UIInfo:
   - onChangeField: vehicleFuellingDetails[0].vehicleType.name
     affectedFields:
       vehicleFuellingDetails[0].vehicleRegNo.regNumber:
-        pattern: /egov-mdms-service/v1/_get?&moduleName=SWM&masterName=Vehicle&filter=[?(@.vehicleType == {autoUi[0].parentDropDown})]|$..id|$..regNumber
+        pattern: /egov-mdms-service/v1/_get?&moduleName=SWM&masterName=Vehicle&filter=[?(@.vehicleType == {vehicleFuellingDetails[0].vehicleRegNo.regNumber})]|$..id|$..regNumber
         type: dropDown
   externalData:
   - fieldName: vehicleFuellingDetails[0].vehicleType.name
