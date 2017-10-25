@@ -40,6 +40,7 @@ paths:
             maxLength: 265
           - name: transactionDate
             type: string
+            format: date
             in: query
             description: transactionDate of the VehicleFuellingDetails
           - name: vehicleType.id
@@ -82,6 +83,7 @@ paths:
             maxLength: 265
           - name: receiptDate
             type: string
+            format: date
             in: query
             description: receiptDate of the VehicleFuellingDetails
           - $ref: '#/parameters/pageSize'
