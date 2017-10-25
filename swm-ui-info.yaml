@@ -6,27 +6,33 @@ UIInfo:
       - vehicleFuellingDetails[0].transactionDate
     VehicleDetails2:
       fields:
-      - vehicleFuellingDetails[0].vehicleType.id
-      - vehicleFuellingDetails[0].vehicleRegNo.id
+      - vehicleFuellingDetails[0].vehicleType.name
+      - vehicleFuellingDetails[0].vehicleRegNo.regNumber
       - vehicleFuellingDetails[0].vehicleReadingDuringFuelling
     VehicleDetails3:
       fields:
-      - vehicleFuellingDetails[0].refillingPumpStation.id
+      - vehicleFuellingDetails[0].refuellingStation.name
       - vehicleFuellingDetails[0].fuelFilled
       - vehicleFuellingDetails[0].typeOfFuel
       - vehicleFuellingDetails[0].totalCostIncurred
       - vehicleFuellingDetails[0].receiptNo
       - vehicleFuellingDetails[0].receiptDate
+  dependents:
+  - onChangeField: vehicleFuellingDetails[0].vehicleType.name
+    affectedFields:
+      vehicleFuellingDetails[0].vehicleRegNo.regNumber:
+        pattern: /egov-mdms-service/v1/_get?&moduleName=SWM&masterName=Vehicle&filter=[?(@.vehicleType == {autoUi[0].parentDropDown})]|$..id|$..regNumber
+        type: dropDown
   externalData:
-  - fieldName: vehicleFuellingDetails[0].vehicleType.id
+  - fieldName: vehicleFuellingDetails[0].vehicleType.name
     url: "/egov-mdms-service/v1/_get?&moduleName=SWM&masterName=VehicleType"
     keyPath: "$..id"
     valPath: "$..name"
-  - fieldName: vehicleFuellingDetails[0].vehicleRegNo.id
+  - fieldName: vehicleFuellingDetails[0].vehicleRegNo.regNumber
     url: "/egov-mdms-service/v1/_get?&moduleName=SWM&masterName=Vehicle"
     keyPath: "$..id"
     valPath: "$..regNumber"
-  - fieldName: vehicleFuellingDetails[0].refillingPumpStation.id
+  - fieldName: vehicleFuellingDetails[0].refuellingStation.name
     url: "/egov-mdms-service/v1/_get?&moduleName=SWM&masterName=RefillingPumpStation"
     keyPath: "$..id"
     valPath: "$..name"
@@ -39,7 +45,7 @@ UIInfo:
     - vehicleType
     - vehicleRegNo
     - vehicleReadingDuringFuelling
-    - refillingPumpStation
+    - refuellingStation
     - fuelFilled
     - typeOfFuel
     - totalCostIncurred
@@ -51,7 +57,7 @@ UIInfo:
     - vehicleType.name
     - vehicleRegNo.regNumber
     - vehicleReadingDuringFuelling
-    - refillingPumpStation.name
+    - refuellingStation.name
     - fuelFilled
     - typeOfFuel
     - totalCostIncurred
