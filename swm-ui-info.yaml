@@ -1,5 +1,7 @@
 UIInfo:
 - referencePath: "/vehiclefuellingdetails"
+  searchUrl: "/vehiclefuellingdetails/_search?transactionNo={transactionNo}"
+  
   groups:
     VehicleDetails1:
       fields:
