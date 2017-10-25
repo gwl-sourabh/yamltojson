@@ -43,13 +43,15 @@ paths:
             format: date
             in: query
             description: transactionDate of the VehicleFuellingDetails
-          - name: vehicleType.id
+          - name: vehicleType.name
             type: string
+            format: singleValueList
             in: query
             description: vehicleType id of the VehicleFuellingDetails
             maxLength: 265
-          - name: vehicleRegNo.id
+          - name: vehicleRegNo.regNumber
             type: string
+            format: singleValueList
             in: query
             description: vehicleRegNo id of the VehicleFuellingDetails
             maxLength: 265
@@ -57,8 +59,9 @@ paths:
             type: string
             in: query
             description: vehicleReadingDuringFuelling of the VehicleFuellingDetails
-          - name: refuellingStation.id
+          - name: refuellingStation.name
             type: string
+            format: singleValueList
             in: query
             description: refuellingStation id of the VehicleFuellingDetails
             maxLength: 265
