@@ -11,7 +11,7 @@ UIInfo:
       - vehicleFuellingDetails[0].vehicleReadingDuringFuelling
     VehicleDetails3:
       fields:
-      - vehicleFuellingDetails[0].refuellingStation.id
+      - vehicleFuellingDetails[0].refillingPumpStation.id
       - vehicleFuellingDetails[0].fuelFilled
       - vehicleFuellingDetails[0].typeOfFuel
       - vehicleFuellingDetails[0].totalCostIncurred
@@ -26,7 +26,7 @@ UIInfo:
     url: "/egov-mdms-service/v1/_get?&moduleName=SWM&masterName=Vehicle"
     keyPath: "$..id"
     valPath: "$..regNumber"
-  - fieldName: vehicleFuellingDetails[0].refuellingStation.id
+  - fieldName: vehicleFuellingDetails[0].refillingPumpStation.id
     url: "/egov-mdms-service/v1/_get?&moduleName=SWM&masterName=RefillingPumpStation"
     keyPath: "$..id"
     valPath: "$..name"
@@ -39,7 +39,7 @@ UIInfo:
     - vehicleType
     - vehicleRegNo
     - vehicleReadingDuringFuelling
-    - refuellingStation
+    - refillingPumpStation
     - fuelFilled
     - typeOfFuel
     - totalCostIncurred
@@ -51,7 +51,7 @@ UIInfo:
     - vehicleType.name
     - vehicleRegNo.regNumber
     - vehicleReadingDuringFuelling
-    - refuellingStation.name
+    - refillingPumpStation.name
     - fuelFilled
     - typeOfFuel
     - totalCostIncurred
