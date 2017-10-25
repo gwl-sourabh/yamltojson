@@ -570,6 +570,7 @@ definitions:
           minLength: 4
         name:
           type: string
+          format: singleValueList
           description: name of the VehicleType
           maxLength: 128
           minLength: 4
@@ -597,6 +598,7 @@ definitions:
           $ref: "#/definitions/VehicleType"
         regNumber:
           type: string
+          format: singleValueList
           description: registration Number of the Vehicle. Should be unique across the platform. Special characters not allowed. Space not allowed. 
           maxLength: 12
           minLength: 6
@@ -1250,6 +1252,7 @@ definitions:
           $ref: 'https://raw.githubusercontent.com/egovernments/egov-services/master/docs/egov-location/contracts/v1-0-0.yml#/definitions/Boundary'
         name:
           type: string
+          format: singleValueList
           description: name of the RefillingPumpStation
           maxLength: 256
           minLength: 1
@@ -1960,4 +1963,3 @@ parameters:
       format: int32
       in: query
       description: page number of the Search Results, Default value is 0
-
